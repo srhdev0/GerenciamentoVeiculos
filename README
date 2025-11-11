@@ -1,0 +1,98 @@
+Sistema de Gerenciamento de Veículos
+
+Este projeto foi desenvolvido como **atividade prática de Programação Orientada a Objetos (POO)** em **Java**, com foco em **herança, encapsulamento e classes abstratas**.
+
+---
+
+Objetivo
+
+Implementar um sistema simples de gerenciamento de veículos, utilizando os principais conceitos da Programação Orientada a Objetos (POO):
+
+- Classes e objetos  
+- Herança  
+- Encapsulamento  
+- Métodos e classes abstratas  
+
+---
+
+Estrutura do Projeto
+src/
+├── Veiculo.java // Classe abstrata base
+├── Carro.java // Subclasse de Veiculo
+├── Moto.java // Subclasse de Veiculo
+└── Main.java // Classe principal para execução
+
+
+---
+
+Descrição das Classes
+
+Classe Abstrata `Veiculo`
+Define a estrutura base para todos os veículos.
+
+**Atributos:**
+- `marca` (público)
+- `modelo` (público)
+- `ano` (privado)
+
+**Métodos:**
+- `getAno()` e `setAno(int ano)` — acesso controlado ao atributo `ano`
+- `informacoesVeiculo()` — método abstrato que deve ser implementado pelas subclasses
+
+---
+
+Classe `Carro`
+Herda de `Veiculo`.
+
+**Atributo adicional:**
+- `numeroPortas` (público)
+
+**Método sobrescrito:**
+- `informacoesVeiculo()` — retorna todas as informações do carro.
+
+---
+
+Classe `Moto`
+Herda de `Veiculo`.
+
+**Atributo adicional:**
+- `cilindrada` (privado)
+
+**Métodos:**
+- `getCilindrada()` e `setCilindrada()` — acesso controlado ao atributo `cilindrada`
+- `informacoesVeiculo()` — retorna todas as informações da moto.
+
+---
+
+Classe `Main`
+Responsável pela execução do programa, instanciando objetos das classes `Carro` e `Moto` e exibindo suas informações.
+
+**Exemplo de código:**
+```java
+public class Main {
+    public static void main(String[] args) {
+        Carro carro = new Carro("Toyota", "Corolla", 2020, 4);
+        Moto moto = new Moto("Honda", "CB 500", 2022, 500);
+
+        System.out.println(carro.informacoesVeiculo());
+        System.out.println(moto.informacoesVeiculo());
+    }
+}
+
+
+Como Executar o Projeto
+
+Requisitos
+Java JDK 17 ou superior instalado.
+
+Terminal ou IDE de sua preferência (IntelliJ, Eclipse, VS Code etc.)
+
+Passos
+Clonar o repositório:
+git clone https://github.com/srhdev0/UlbraProgramacaoObj
+
+Entrar na Pasta do Projeto
+
+Compilar o Codigo
+
+Executar o Programa
